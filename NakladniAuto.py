@@ -1,6 +1,10 @@
 class NakladniAuto:
 
     def __init__(self, nosnost = 12000):
+        """
+        Vytvoří novou instanci nákladního auta
+        :param nosnost: Maximální nosnost daného auta, defaultní hodnota 12 t
+        """
         self._nosnost = nosnost
         self._naklad = 0
 
