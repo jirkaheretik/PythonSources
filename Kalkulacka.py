@@ -12,6 +12,7 @@ class Kalkulacka:
         return a / b
 
 
-k = Kalkulacka()
-print(k.secti(5, 10))
-print(k.odecti(20, -10))
+if __name__ == '__main__':
+    k = Kalkulacka()
+    print(k.secti(5, 10))
+    print(k.odecti(20, -10))
