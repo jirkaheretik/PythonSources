@@ -1,5 +1,3 @@
-# jen komentář
-
 class Zvire:
     def __init__(self, popis, vaha):
         self._popis = popis
