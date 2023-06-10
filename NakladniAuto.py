@@ -16,6 +16,9 @@ class NakladniAuto:
         if mnozstvi <= self._naklad:
             self._naklad -= mnozstvi
 
+    def getNaklad(self):
+        return self._naklad
+
     def __str__(self):
         return f"Nákladní auto má naloženo {self._naklad} z možných {self._nosnost} kg."
 
