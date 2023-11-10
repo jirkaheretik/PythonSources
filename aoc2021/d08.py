@@ -3,6 +3,11 @@ from pprint import pprint
 SIZE = 99
 
 def readFile(filename):
+    """
+    Reads input file into a list (by line)
+    :param filename:
+    :return:
+    """
     inputValues = []
     f = open(filename, "r")
     if f.mode == "r":
