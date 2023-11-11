@@ -1,0 +1,131 @@
+import sys
+
+"""
+INPUT:
+Io, Europa, Ganymede, and Callisto.
+17 -9   4
+ 2  2 -13
+-1  5  -1
+ 4  7  -7
+"""
+
+class Moon:
+    def __init__(self, name):
+        self.name = name
+        self.speedX = 0
+        self.speedY = 0
+        self.speedZ = 0
+
+    def setVelocity(self, x, y, z):
+        self.speedX = x
+        self.speedY = y
+        self.speedZ = z
+
+    def setPos(self, x, y, z):
+        self.posX = x
+        self.posY = y
+        self.posZ = z
+
+    def step(self):
+        self.posX += self.speedX
+        self.posY += self.speedY
+        self.posZ += self.speedZ
+
+    def checksum(self, prime):
+        result = (self.posX * 3 + prime) * (self.posY * 5 + prime) * (self.posZ * 11 + prime)
+        result += (self.speedX * 13 + prime) * (self.speedY * 19 + prime) * (self.speedZ * 2 + prime)
+        return result
+
+    def isZeroSpeed(self):
+        if self.speedX != 0: return False
+        if self.speedY != 0: return False
+        if self.speedZ != 0: return False
+        return True
+
+    def getEnergy(self):
+        return (abs(self.posX) + abs(self.posY) + abs(self.posZ)) * (abs(self.speedX) + abs(self.speedY) + abs(self.speedZ))
+
+    def tisk(self):
+        print("{} at [{}, {}, {}] cruising with {}; {}; {} and total energy of {}".format(
+            self.name, self.posX, self.posY, self.posZ, self.speedX, self.speedY, self.speedZ, self.getEnergy()))
+
+def compare(m1, m2):
+    if m1.posX > m2.posX:
+        m1.speedX -= 1
+        m2.speedX += 1
+    elif m1.posX < m2.posX:
+        m1.speedX += 1
+        m2.speedX -= 1
+    if m1.posY > m2.posY:
+        m1.speedY -= 1
+        m2.speedY += 1
+    elif m1.posY < m2.posY:
+        m1.speedY += 1
+        m2.speedY -= 1
+    if m1.posZ > m2.posZ:
+        m1.speedZ -= 1
+        m2.speedZ += 1
+    elif m1.posZ < m2.posZ:
+        m1.speedZ += 1
+        m2.speedZ -= 1
+
+def doStep(m1, m2, m3, m4):
+    compare(m1, m2)
+    compare(m1, m3)
+    compare(m1, m4)
+    compare(m2, m3)
+    compare(m2, m4)
+    compare(m3, m4)
+    m1.step()
+    m2.step()
+    m3.step()
+    m4.step()
+
+def computeState(m1, m2, m3, m4):
+    return m1.checksum(13) + 3 * m2.checksum(17) + 7 * m3.checksum(23) + 5 * m4.checksum(11)
+
+def isZeroSpeed(m1, m2, m3, m4):
+    return m1.isZeroSpeed() and m2.isZeroSpeed() and m3.isZeroSpeed() and m4.isZeroSpeed()
+
+
+if __name__ == "__main__":
+    io = Moon("Io")
+    io.setPos(17, -9, 4)
+    #io.setPos(-8, -10, 0)
+    eu = Moon("Europa")
+    eu.setPos(2, 2, -13)
+    #eu.setPos(5, 5, 10)
+    ga = Moon("Ganymede")
+    ga.setPos(-1, 5, -1)
+    #ga.setPos(2, -7, 3)
+    ca = Moon("Callisto")
+    ca.setPos(4, 7, -7)
+    #ca.setPos(9, -8, -3)
+
+    #states = set()
+    #states.add(computeState(io, eu, ga, ca))
+
+    i = 0
+    while True:
+        doStep(io, eu, ga, ca)
+        if isZeroSpeed(io, eu, ga, ca):
+            print("\n\n\nZERO SPEED STATE FOUND! After step {}".format(i + 1))
+            io.tisk()
+            eu.tisk()
+            ga.tisk()
+            ca.tisk()
+            sys.exit()
+        """    
+        stav = computeState(io, eu, ga, ca)
+        if stav in states:
+            print("\nAfter step {}:".format(i + 1))
+            io.tisk()
+            eu.tisk()
+            ga.tisk()
+            ca.tisk()
+        else:
+            states.add(stav)
+        """
+        i += 1
+        
+    print("Total energy: {}".format(io.getEnergy() + eu.getEnergy() + ga.getEnergy() + ca.getEnergy()))
