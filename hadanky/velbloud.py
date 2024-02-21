@@ -42,11 +42,12 @@ def velbloudi2(banany, vzdalenost, nosnost, cena):
             # to uz umime, nalozit a jet, lze rozhodnout, co dal:
             diff = banany - vzdalenost * cena
             if diff >= 0:
-                print("Do cile dovezeme {} bananu".format(diff))
+                print(f"Do cile dovezeme {diff} bananu")
             else:
-                print("Uloha nema reseni, potrebujeme jeste {} bananu, abychom aspon dojeli do cile s prazdnou.".format(diff))
+                vzdalenost -= banany//cena
+                print("Uloha nema reseni, skoncime {} km od cile.".format(vzdalenost))
             break # ukoncit cyklus
 
 
-velbloudi(5000, 1000, 1000, 1)
+velbloudi2(3468, 1000, 1000, 2)
 #velbloudi(10000, 1000, 1000, 2)
