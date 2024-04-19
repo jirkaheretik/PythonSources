@@ -1,4 +1,6 @@
-class Zvire:
+from abc import ABC, abstractmethod
+
+class Zvire(ABC):
     def __init__(self, popis, vaha):
         self._popis = popis
         self._vaha = vaha
@@ -13,8 +15,13 @@ class Zvire:
     def vypis(self):
         print(self)
 
+    @abstractmethod
     def mluv(self):
-        return ""
+        pass
+
+    @abstractmethod
+    def pohni_se(self):
+        pass
 
     def __str__(self):
         return f"Jsem {self._popis}, vážím {self._vaha} kg a " + ("létám" if self.leta else "nelétám")
@@ -50,7 +57,12 @@ if __name__ == '__main__':
     vrana.vypis()
     vrana.nakrm(3)
     vrana.vypis()
-    zoo = [Pes("Alik", 11, True), Kocka("Micka", 6, 7), Krava("Stračena", 222, 11), vrana, Pes("Fousek", 20, False)]
+
+    zoo = [Pes("Alik", 11, True),
+           Kocka("Micka", 6, 7),
+           Krava("Stračena", 222, 11),
+           vrana,
+           Pes("Fousek", 20, False)]
 
     for zvire in zoo:
         print(zvire)

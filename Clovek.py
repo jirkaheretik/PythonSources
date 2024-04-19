@@ -15,16 +15,16 @@ class Clovek:
     def pozdrav(self, pozdrav = "Ahoj"):
         print(f"{pozdrav}, já jsem {self._jmeno} a je mi {self._vek} let.")
 
-    def __str__(self):
-        return f"{self._jmeno}, {self._vek}"
 
-    def __eq__(self, xxxxx):
-        print("Clovek.Eq called %r == %r" % (self, xxxxx))
-        if not isinstance(xxxxx, Clovek):
+
+    def __eq__(self, other):
+        print("Clovek.Eq called %r == %r" % (self, other))
+        if not isinstance(other, Clovek):
             print("Clovek.Eq - the other object is not Clovek")
             return False
         print("Clovek.Eq - comparing values")
-        return self._jmeno == xxxxx._jmeno and self._vek == xxxxx._vek
+        return self._jmeno == other._jmeno and self._vek == other._vek
+
 
 
 class Programator(Clovek):
@@ -36,6 +36,8 @@ class Programator(Clovek):
             print("Hello world!")
         else:
             super(Programator, self).pozdrav(pozdrav)
+
+
     def __eq__(self, other):
         print("Pgmer.Eq called %r == %r" % (self, other))
         if not isinstance(other, Programator):
@@ -45,7 +47,12 @@ class Programator(Clovek):
         return self._jmeno == other._jmeno and self._vek == other._vek and self._jazyk == other._jazyk
 
 c1 = Clovek("Karel", 42)
-c2 = Programator("Karel", 42, "Python")
+c3 = Clovek("Karel", 42)
+c2 = Clovek("Karel", 42)
+print(c1)
+print(c2)
+print(c1 == c2)
+"""
 c3 = c1
 print("Začátek")
 if c2 == c1:
@@ -58,3 +65,4 @@ if c1 == c2:
 else:
     print("Tohle taky různé")
 print("Konec.")
+"""
