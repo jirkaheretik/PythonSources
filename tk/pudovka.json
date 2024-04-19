@@ -1,58 +1,113 @@
-[
+{
+  "languages": ["cz", "en"],
+  "cz": [
   {
-    "lang": "cz",
     "q": "Patří mezi 10 největších hor světa?",
     "good": ["K2", "Kančendženga", "Lhoce", "Makalu", "Čo Oju", "Dhaulágirí", "Manáslu", "Nanga Parbat", "Annapurna"],
     "bad": ["Gašerbrum I", "Gašerbrum II", "Broad Peak", "Šiša Pangma", "Annapurna II", "Kilimandžáro", "Čobolaguna", "Nupce", "Mount McKinley"]
   },
   {
-    "lang": "cz",
     "q": "Jde o hlavní město evropského státu?",
     "good": ["Riga", "Madrid", "Oslo", "Monaco", "Ljublana", "Kyjev", "Minsk", "Helsinki", "Tiraňa", "Skopje", "Sofie", "Podgorica"],
     "bad": ["Bonn", "Lima", "Ženeva", "Istanbul", "Rotterdam", "Koblenz", "Terst", "Mostar", "Kaunas", "Kaliningrad", "Tripolis"]
   },
   {
-    "lang": "cz",
     "q": "Jde o prvočíslo?",
     "good": ["2", "3", "5", "17", "19", "173", "271", "199", "4091", "89"],
     "bad": ["1", "77", "143", "4", "15", "49", "9", "2048", "12", "69"]
   },
   {
-    "lang": "cz",
     "q": "Umíš poznat známé programátory?",
-    "good": [
-      "Bill Gates",
-      "Mark Zuckerberg",
-      "Barbara Liskov",
-      "Dennis Ritchie",
-      "Brian Kernighan",
-      "Guido van Rossum",
-      "Linus Torvalds",
-      "Ada Lovelace",
-      "Edsger Dijkstra"
-    ],
-    "bad": [
-      "David Beckham",
-      "Tupac Shakur",
-      "Nipsey Hussle",
-      "Danny Rodriguez",
-      "Stephen Jobas",
-      "Hare Krisna",
-      "Lindsey Vonn",
-      "Mark Gates",
-      "George Soros"
-    ]
+    "good": ["Bill Gates", "Mark Zuckerberg", "Barbara Liskov", "Dennis Ritchie", "Brian Kernighan", "Guido van Rossum", "Linus Torvalds", "Ada Lovelace", "Edsger Dijkstra"],
+    "bad": ["David Beckham", "Tupac Shakur", "Nipsey Hussle", "Danny Rodriguez", "Stephen Jobas", "Hare Krisna", "Lindsey Vonn", "Mark Gates", "George Soros"]
   },
   {
-    "lang": "cz",
     "q": "Jde o moře u evropských břehů?",
     "good": ["Středozemní", "Tyrhénské", "Jaderské", "Jónské", "Egejské", "Černé", "Azovské", "Keltské", "Norské"],
     "bad": ["Kaspické", "Rudé", "Biskajské", "Lamanšské", "Ladožské", "Botnické", "Beringovo", "Karské", "Ochotské"]
   },
   {
-    "lang": "cz",
     "q": "Patří mezi 10 největších měst světa?",
     "good": ["Tokio", "Dillí", "Šanghaj", "Sao Paulo", "Ciudad de Mexico", "Káhira", "Bombaj", "Peking", "Dháka", "Ósaka"],
     "bad": ["Istanbul", "Manila", "Kalkata", "Moskva", "Paříž", "Rio de Janeiro", "Bogota", "Jakarta", "Los Angeles", "Wu-chan"]
-  }
-]
+  },
+    {
+      "q": "Leží tento stát v Asii?",
+      "good": ["Laos", "Nepál", "Bhútán", "Jemen", "Sýrie", "Vietnam", "Izrael", "Omán", "Libanon", "Malajsie"],
+      "bad": ["Surinam", "Vanuatu", "Eritrea", "Uganda", "Togo", "Benin", "Libérie", "Tunisko", "Austrálie", "Somálsko"]
+    },
+    {
+      "q": "Leží tento stát v Africe?",
+      "good": ["Maroko", "Tunisko", "Eritrea", "Uganda", "Togo", "Benin", "Libérie", "Namibie", "Malawi", "Kamerun"],
+      "bad": ["Peru", "Belize", "Guatemala", "Ekvádor", "Nikaragua", "Laos", "Surinam", "Vanuatu", "Jemen", "Sýrie"]
+    },
+    {
+      "q": "Mezi současné či zaniklé usedlosti v Košířích patří:",
+      "good": ["Bulovka", "Kotlářka", "Kavalírka", "Cibulka", "Šmukýřka", "Turbová", "Poštovka", "Měchurka", "Božinka", "Vojanka", "Klamovka"],
+      "bad": ["Andělka", "Balabenka", "Folimanka", "Bertramka", "Bořislavka", "Cikánka", "Habrovka", "Hanspaulka", "Chmelnice", "Ladronka"]
+    },
+    {
+      "q": "Do tarokových karet patří:",
+      "good": ["Škýz", "Mond", "Pagát", "Trul", "Devatenáctka", "Srdcová jednička", "Třináctka", "Kárový král", "Srdcová dáma", "Listová sedma", "Dvacítka"],
+      "bad": ["Mongol", "Smrt", "Tři kříže", "Srdcová sedma", "Kárová desítka", "Kárový svršek", "Srdcová devítka", "Veliké štěstí", "Zamilovaná dvojice", "Žaludová šestka"]
+    },
+    {
+      "q": "Jaké jsou pokerové kombinace?",
+      "good": ["Dvojice", "Dva páry", "Trojice", "Barva", "Postupka", "Full House", "Poker", "Čistá postupka", "Královská postupka", "Anna Kournikova"],
+      "bad": ["Tři páry", "Dvě trojice", "Karta mrtvého Vránka", "K-A-2-3-4", "Čtyři v barvě", "Blef", "Maria Sharapova", "Veliké štěstí", "Omaha", "Žaludová šestka"]
+    },
+    {
+      "q": "Jde o britskou značku automobilů?",
+      "good": ["Rolls Royce", "Jaguar", "Austin", "Aston Martin", "Vauxhall", "Bentley", "Land Rover", "McLaren", "MG", "Standard-Triumph"],
+      "bad": ["BMW", "Seat", "Mini", "Manchester", "Opel", "Ford", "Chevrolet", "Dodge", "Viper", "Ayrton"]
+    },
+    {
+      "q": "Najdi známé karetní hry:",
+      "good": ["Mariáš", "Taroky", "Bridž", "Poker", "Prší", "Skat", "Bang!", "Žolíky", "Kanasta", "Vole padni"],
+      "bad": ["Tarot", "Svatba", "Mostík", "Jen se leje", "Lejem!", "Dávej ber", "Štramáci", "Šulíni", "Bulánci", "Go"]
+    },
+    {
+      "q": "Do rodu lamy patří:",
+      "good": ["Lama krotká", "Guanako", "Alpaka", "Vikuňa", "Huarizo", "Pakovikuňa", "Lamovikuňa"],
+      "bad": ["Lama krátká", "Lama menses", "Alpa", "Francovka", "Titicaca", "Guanokuňa", "Alpanako", "Kůň Převalského"]
+    },
+    {
+      "q": "Šachové figurky obsahují:",
+      "good": ["Král", "Dáma", "Věž", "Střelec", "Kůň", "Pěšec"],
+      "bad": ["Vrchní", "Služka", "Obrácená věž", "Zeď", "Plebejec", "Vojín", "Kaprál", "Švidravý lučištník"]
+    },
+    {
+      "q": "Mezi české vojenské hodnosti patří:",
+      "good": ["Rotný", "Svobodník", "Praporčík", "Poručík", "Kapitán", "Major", "Plukovník", "Generál", "Generálporučík", "Podplukovník"],
+      "bad": ["Setník", "Četník", "Rotař", "Desátek", "Podpraporčík", "Seržant", "Voják", "Podmajor", "Podporučík", "Nadplukovník"]
+    },
+    {
+      "q": "Znáte fakulty Univerzity Karlovy?",
+      "good": ["Právnická fakulta", "2. lékařská fakulta", "Farmaceutická fakulta", "Filosofická fakulta", "Pedagogická fakulta", "Fakulta sociálních věd", "Fakulta humanitních studií", "Katolická teologická fakulta", "Husitská teologická fakulta", "Fakulta tělesné výchovy a sportu"],
+      "bad": ["Protestantská teologická fakulta", "4. lékařská fakulta", "Advokátní fakulta", "Matematická fakulta", "Fyzikální fakulta", "Fakulta múzických umění", "Fakulta kritického myšlení", "Fakulta obracečů hamburgerů", "Chemickotechnologická fakulta", "2. pedagogická fakulta"]
+    },
+    {
+      "q": "Co je vždy v nižší vzdálenosti od Země než oběžná dráha mezinárodní vesmírné stanice ISS?",
+      "good": ["Kármanova hranice", "Mezosféra", "Stratosféra", "Troposféra", "Vrchol Mount Everestu", "Mezopauza", "Vojenská stíhací letadla", "Meteorologické balóny"],
+      "bad": ["Měsíc", "Geostacionární družice", "Exosféra", "Termopauza", "Mars", "Kuiperův pás", "Družice Galileo", "Družice GPS", "Průlet komety", "Termosféra"]
+    },
+    {
+      "q": "Co se stalo během vlády Karla IV.?",
+      "good": ["Pohřeb Jana Lucemburského", "Vytvoření svatováclavské koruny", "Založení Univerzity Karlovy", "Smrt císaře Ludvíka Bavorského", "Dokončení stavby hradu Karlštejn", "Stavba hradu Kašperk", "Smrt Urbana V., 200. papeže", "Založení říše Ming", "První morová epidemie", "Boccaccio sepsal Dekameron"],
+      "bad": ["Kostnický koncil", "Marco Polo v Číně", "Devátá křížová výprava", "Zlatá bula sicilská", "Vymření Přemyslovců", "Bitva u Kresčaku", "Bitva na Kosově poli", "Počátek Stoleté války", "Vymření Arpádovců", "Konec Stoleté války"]
+    },
+    {
+      "q": "Jde o oficiálně používanou zkratku veřejné vysoké školy v ČR?",
+      "good": ["JAMU", "AVU", "ČVUT", "MENDELU", "TUL", "UPCE", "UTB", "VŠE", "VUT", "ZČU"],
+      "bad": ["MUBR", "LFUK", "HNOJU", "JUBUD", "UBUD", "VŠPTJ", "VŠLE", "JELEN", "NELEJ", "KUP"]
+    },
+    {
+      "q": "Leží tento stát na více světadílech?",
+      "good": ["Egypt", "Rusko", "Turecko", "Gruzie", "Kazachstán", "Ázerbajdžán", "Panama", "Francie", "Nizozemské království"],
+      "bad": ["Trinidad a Tobago", "USA", "Ekvádor", "Nikaragua", "Čína", "Kyrgyzstán", "Pákistán", "Indie", "Mexiko"]
+    }
+],
+  "en": [
+
+  ]
+}
