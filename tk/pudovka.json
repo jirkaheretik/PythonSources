@@ -1,0 +1,58 @@
+[
+  {
+    "lang": "cz",
+    "q": "Patří mezi 10 největších hor světa?",
+    "good": ["K2", "Kančendženga", "Lhoce", "Makalu", "Čo Oju", "Dhaulágirí", "Manáslu", "Nanga Parbat", "Annapurna"],
+    "bad": ["Gašerbrum I", "Gašerbrum II", "Broad Peak", "Šiša Pangma", "Annapurna II", "Kilimandžáro", "Čobolaguna", "Nupce", "Mount McKinley"]
+  },
+  {
+    "lang": "cz",
+    "q": "Jde o hlavní město evropského státu?",
+    "good": ["Riga", "Madrid", "Oslo", "Monaco", "Ljublana", "Kyjev", "Minsk", "Helsinki", "Tiraňa", "Skopje", "Sofie", "Podgorica"],
+    "bad": ["Bonn", "Lima", "Ženeva", "Istanbul", "Rotterdam", "Koblenz", "Terst", "Mostar", "Kaunas", "Kaliningrad", "Tripolis"]
+  },
+  {
+    "lang": "cz",
+    "q": "Jde o prvočíslo?",
+    "good": ["2", "3", "5", "17", "19", "173", "271", "199", "4091", "89"],
+    "bad": ["1", "77", "143", "4", "15", "49", "9", "2048", "12", "69"]
+  },
+  {
+    "lang": "cz",
+    "q": "Umíš poznat známé programátory?",
+    "good": [
+      "Bill Gates",
+      "Mark Zuckerberg",
+      "Barbara Liskov",
+      "Dennis Ritchie",
+      "Brian Kernighan",
+      "Guido van Rossum",
+      "Linus Torvalds",
+      "Ada Lovelace",
+      "Edsger Dijkstra"
+    ],
+    "bad": [
+      "David Beckham",
+      "Tupac Shakur",
+      "Nipsey Hussle",
+      "Danny Rodriguez",
+      "Stephen Jobas",
+      "Hare Krisna",
+      "Lindsey Vonn",
+      "Mark Gates",
+      "George Soros"
+    ]
+  },
+  {
+    "lang": "cz",
+    "q": "Jde o moře u evropských břehů?",
+    "good": ["Středozemní", "Tyrhénské", "Jaderské", "Jónské", "Egejské", "Černé", "Azovské", "Keltské", "Norské"],
+    "bad": ["Kaspické", "Rudé", "Biskajské", "Lamanšské", "Ladožské", "Botnické", "Beringovo", "Karské", "Ochotské"]
+  },
+  {
+    "lang": "cz",
+    "q": "Patří mezi 10 největších měst světa?",
+    "good": ["Tokio", "Dillí", "Šanghaj", "Sao Paulo", "Ciudad de Mexico", "Káhira", "Bombaj", "Peking", "Dháka", "Ósaka"],
+    "bad": ["Istanbul", "Manila", "Kalkata", "Moskva", "Paříž", "Rio de Janeiro", "Bogota", "Jakarta", "Los Angeles", "Wu-chan"]
+  }
+]
