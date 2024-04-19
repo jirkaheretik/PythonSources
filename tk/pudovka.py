@@ -51,10 +51,37 @@ JSON pro otázky:
 import json
 import random
 import hashlib
+from playsound import playsound
 
 LANG = "cz"
 GOOD_COUNT = 5
 BAD_COUNT = 5
+FAIL_COUNT = 6
+SUCC_COUNT = 7
+FINAL_COUNT = 1
+FAIL_NAME = "fail"
+SUCC_NAME = "succ"
+FINAL_NAME = "final-applause"
+SOUND_LOC = "sounds/"
+SOUND_EXT = ".mp3"
+
+def _sort_by_score(e):
+    return e['score']
+
+def _get_sound_name(action, limit):
+    return SOUND_LOC + action + str(random.randrange(limit) + 1) + SOUND_EXT
+
+def fail_name():
+    return _get_sound_name(FAIL_NAME, FAIL_COUNT)
+
+def succ_name():
+    return _get_sound_name(SUCC_NAME, SUCC_COUNT)
+
+def final_name():
+    return _get_sound_name(FINAL_NAME, FINAL_COUNT)
+
+def play_sound(funcname):
+    playsound(funcname(), False)
 
 class BgColors:
     HEADER = '\033[95m'
@@ -108,6 +135,7 @@ class ConsoleUi:
         for player in players:
             print(f"{poradi}. {player['name']}\t\t{player['score']}")
             poradi += 1
+        play_sound(final_name)
 
     def notify_player(self, name):
         self.pprint("Na řadě je hráč " + name + "!", BgColors.OKGREEN)
@@ -123,16 +151,16 @@ class ConsoleUi:
             except ValueError:
                 print("To ne, zkus číslo.")
         self._last_answer = answer
-        self._answers.append(answer)
+        self._answers.add(answer)
         return answer
 
     def guess_status(self, isCorrect):
         if isCorrect:
             self.pprint(f"To je {len(self._answers)}. správná odpověď!", BgColors.OKGREEN)
+            play_sound(succ_name)
         else:
             self.pprint(f"Chyba! Vybraná odpověď {self._all_answers[self._last_answer]} není správně!", BgColors.FAIL)
-
-        pass
+            play_sound(fail_name)
 
     def game_state(self, status):
         self.pprint(status, BgColors.OKCYAN)
@@ -140,7 +168,7 @@ class ConsoleUi:
     def display_question(self, status, q, answers):
         self.game_state(status)
         self._all_answers = answers
-        self._answers = []
+        self._answers = set()
         self.pprint("Otázka:", BgColors.BOLD)
         self.pprint(q, BgColors.BOLD)
         self.pprint("0. Konec kola (hraje další hráč)", BgColors.OKBLUE)
@@ -191,10 +219,6 @@ class Db:
             if not haystack[good_num] in result:
                 result.append(haystack[good_num])
         return result
-
-
-def _sort_by_score(e):
-    return e['score']
 
 
 class Game:
@@ -265,7 +289,7 @@ class Game:
             # wait for End-of-round
             current = len(answers) * (len(answers) + 1) // 2
             player['score'] += current
-            self._ui.status(player['name'], current, player['score'])
+            self._ui.player_update(player['name'], current, player['score'])
             self._ui.clear()
         return True # all ok
 
@@ -281,11 +305,11 @@ class Game:
 
 
 if __name__ == '__main__':
-    score = 150
+    score = 50
     players_short = ["Filip", "Jirka"]
     players_family = ["Filip", "Jirka", "Jitka", "Jim"]
     players_alone = ["Jirka"]
     players_avatars = ["Jirka", "Karel", "Heretik", "Charlie"]
     ui = ConsoleUi()
-    game = Game(Db(ui), ui, players_alone, score)
+    game = Game(Db(ui), ui, players_short, score)
     game.play()
