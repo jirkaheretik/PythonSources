@@ -1,17 +1,17 @@
-def d2(fn):
-    print("D2 načteno")
-    def _f():
-        print("D2 spuštěno")
-        fn()
-        print("D2 ukončeno")
-    return _f
-
 def d1(fn):
     print("D1 načteno")
     def _f():
         print("D1 spuštěno")
         fn()
         print("D1 ukončeno")
+    return _f
+
+def d2(fn):
+    print("D2 načteno")
+    def _f():
+        print("D2 spuštěno")
+        fn()
+        print("D2 ukončeno")
     return _f
 
 @d1
