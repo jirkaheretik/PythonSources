@@ -12,6 +12,7 @@ class WebdriverTestCase(unittest.TestCase):
         self.driver.get("http://www.google.com/")
         time.sleep(5)
         print(f"URL {self.driver.current_url}, page title {self.driver.title}")
+        self.assertEqual("Google", self.driver.title)
         elem = self.driver.find_element(By.NAME, "q") # now the ID is different
         elem.send_keys("ChromeDriver")
         elem.submit()
