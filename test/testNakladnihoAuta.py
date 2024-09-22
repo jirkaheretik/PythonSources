@@ -16,8 +16,9 @@ class NakladakTestCase(unittest.TestCase):
         try:
             instance.vyloz(8000)
         except NakladException:
-            pass
+            print("ok")
         self.assertEqual(5000, instance.getNaklad())
+        #self.assertRaises(NakladException, instance.vyloz, 8000)
 
     def test_nosnost_default(self):
         instance = NakladniAuto()
