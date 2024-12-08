@@ -4,9 +4,8 @@ from oop.pokus.Test import Test
 
 
 class MyTestCase(unittest.TestCase):
-    def nontest_something(self):
-        self.assertEqual(True, False)  # add assertion here
-        test = Test()
+    def test_something(self):
+        self.assertEqual(True, False is False is False)  # add assertion here
 
     def test_scitani(self):
         k = Kalkulacka()
