@@ -36,7 +36,7 @@ def processValues2(load):
 
 
 if __name__ == "__main__":
-    myValues = readFile("d01.txt")
+    myValues = readFile("/home/jirka/src/python0/aoc2022/d01.txt")
     result1 = processValues1(myValues)
     result2 = processValues2(myValues)
     print("Max calories: {}".format(result1))
